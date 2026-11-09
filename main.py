@@ -13,7 +13,19 @@ class TabelaHashing:
     def _fator_carga(self) -> float:
         return self.tamanho/self.capacidade
 
-    def _inserir(self)
+    def _redimensionar(self, nova_capacidade: int):
+        tabela_antiga = self.tabela
+        self.capacidade = nova_capacidade
+        self.tabela = [None]*self.capacidade
+        self.tamanho = 0
+
+        for slot in tabela_antiga:
+            if slot is not None and slot is not self._DELETED:
+                chave, valor = slot
+                self.inserir(chave, valor)
+    
+    def _inserir(self):
+        pass
 
 
 

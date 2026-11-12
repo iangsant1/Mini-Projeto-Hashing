@@ -111,4 +111,7 @@ executar e como registrar adequadamente o resultado. Tive problemas também de l
 código inicialmente, fiz uma reestruturação do código inclusive porque estava confuso e não funcionava,
 utilizei para guiar. Inicialmente não tive a ideia do for em chaves, salvo engano foi utilizada na
 função de varredura completa em que usei buscar_e() e buscar_ou(), em que IA me ajudou a entender o 
-porquê utilizar chaves ao invés de colchetes naquele caso. 
+porquê utilizar chaves ao invés de colchetes naquele caso.
+Acabei de utilizar para verificar a estrutura dos códigos, e a IA percebeu que tinha um requisito pedido
+que não tinha sido colocado, que era para retornar uma lista ordenada. Então atualizei com a função
+sorted para retornar uma lista ordenada.

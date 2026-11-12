@@ -18,14 +18,15 @@ def construir_indice(texto: str) -> dict:
     return dict(indice)
            
 
-def buscar(indice: dict, palavra: str ) -> set:
+def buscar(indice: dict, palavra: str ) -> list:
     palavra_padr = padronizar_palavras(palavra)
-    return indice.get(palavra_padr, set())
+    linhas = indice.get(palavra_padr, set())
+    return sorted((list(linhas)))
     
 
 def buscar_e(indice, palavras):
     if not palavras: #Verificando se há strings vazias, caso não retorna um conjunto vazio
-        return set()
+        return []
 
     resultados = None
     for palavra in palavras:
@@ -39,8 +40,8 @@ def buscar_e(indice, palavras):
 
     return resultados or set()
 
-def buscar_ou(indice, palavras):  
+def buscar_ou(indice, palavras) -> list:  
     resultados = set()
     for palavra in palavras:
         resultados.update(buscar(indice, palavra))
-    return resultados 
+    return sorted(list(resultados or set())) 

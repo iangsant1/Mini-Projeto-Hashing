@@ -1,12 +1,12 @@
 # Mini-Projeto-Hashing
 
-Registros de testes de tempo:
+## Registros de testes de tempo:
         Estes testes foram auxiliados pela IA. Tentei fazer primeiramente com 50000 linhas e 1000
     buscas, mas acabou não rodando do jeito que esperava. Provavelmente ficou pesado demais.
         Vale ressaltar também sobre os testes que há variações de tempo, mas é normal devido as
     variações do próprio sistema operacional, entre outros n motivos.
 
-1º Teste:
+### 1º Teste:
 
 RESULTADOS DE DESEMPENHO (5000 linhas, 100 buscas)
 Tempo de Construção do Índice: 0.018836 s
@@ -28,9 +28,9 @@ O índice invertido foi 96.9x mais rápido por busca.
 
 Em todas as vezes o índice invertido foi consideravelmente maior por busca.
 
-2º teste:
+### 2º teste:
 
-O teste agora foi executado sem o processo de criação do índice, para vermos qual seria a diferença de desempenho. Sendo a mediana das 3 execuções: 
+#### O teste agora foi executado sem o processo de criação do índice, para vermos qual seria a diferença de desempenho. Sendo a mediana das 3 execuções: 
 
 RESULTADOS DE DESEMPENHO (5000 linhas, 1 busca)
 Tempo Médio de Busca (Índice Invertido): 0.00023000 s
@@ -48,8 +48,9 @@ RESULTADOS DE DESEMPENHO (5000 linhas, 1000 busca)
 Tempo Médio de Busca (Índice Invertido): 0.00017567 s
 Tempo Médio de Busca (Varredura Completa): 0.03518142 s
 
-3º Teste:
-Agora será executado o teste com o processo de criação de indice para o mesmo número de busca. Sendo utilizado a mediana das 3 execuções: 
+### 3º Teste:
+
+#### Agora será executado o teste com o processo de criação de indice para o mesmo número de busca. Sendo utilizado a mediana das 3 execuções: 
 
 RESULTADOS DE DESEMPENHO (5000 linhas, 1 busca)
 Tempo de Construção do Índice: 0.016821 s
@@ -80,7 +81,7 @@ Tempo Médio de Busca (Varredura Completa): 0.03962184 s
 Tempo Construção do Índice + Índice Invertido: 0.01633908 s
 Tempo Construção do Índice + Varredura Completa: 0.05578204 s
 
-Conclusão
+## Conclusão
 
 Nos testes feitos, nas condições que foram expostas, não houve um teste em que o índice invertido
 foi menor, em questão de desempenho, do que a varredura completa. Mas isso aconteceu por conta da 
@@ -102,7 +103,7 @@ RAM é elevado. Também por isso tive que baixar a quantidade de linhas para o t
 rodou), ao contrário da varredura completa em que utiliza consideravelmente menos memória RAM.
 
 
-Sobre o uso de IA
+## Sobre o uso de IA
 
 A IA nesse projeto foi utilizada para a implementação de funções que desconhecia, como exemplo das 
 funções de conjuntos como intersection(), até mesmo o uso do set() que ainda estava confuso em como ele

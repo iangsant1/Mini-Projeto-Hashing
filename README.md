@@ -1,10 +1,10 @@
 # Mini-Projeto-Hashing
 
 ## Registros de testes de tempo:
-        Estes testes foram auxiliados pela IA. Tentei fazer primeiramente com 50000 linhas e 1000
-    buscas, mas acabou não rodando do jeito que esperava. Provavelmente ficou pesado demais.
-        Vale ressaltar também sobre os testes que há variações de tempo, mas é normal devido as
-    variações do próprio sistema operacional, entre outros n motivos.
+Estes testes foram auxiliados pela IA. Tentei fazer primeiramente com 50000 linhas e 1000
+buscas, mas acabou não rodando do jeito que esperava. Provavelmente ficou pesado demais.
+Vale ressaltar também sobre os testes que há variações de tempo, mas é normal devido as
+variações do próprio sistema operacional, entre outros n motivos.
 
 ### 1º Teste:
 

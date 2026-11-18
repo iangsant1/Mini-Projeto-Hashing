@@ -4,8 +4,8 @@ def varredura_completa_buscar(texto: str, palavra: str) -> set:
     palavra_padr = padronizar_palavras(palavra)
     linhas_encontradas = set()
 
-    for i, linha in enumerate(texto.splitlines(), start=1):
-        palavras_linha = [padronizar_palavras(p) for p in linha.split()]
+    for i, linha in enumerate(texto.splitlines(), start=1): 
+        palavras_linha = [padronizar_palavras(p) for p in linha.split()] 
         if palavra_padr in palavras_linha:
             linhas_encontradas.add(i)
 
@@ -15,11 +15,11 @@ def varredura_buscar_e(texto: str, palavras: list) -> set:
     if not palavras:
         return set()
     
-    palavra_padr = {padronizar_palavras(p) for p in palavras}
+    palavra_padr = {padronizar_palavras(p) for p in palavras} # Padronizando as palavras buscadas. {} guarda os resultados do loop em um conjunto
     linhas_encontradas = set()
 
     for i, linha in enumerate(texto.splitlines(), start=1):
-        palavras_linha = {padronizar_palavras(p) for p in linha.split()}
+        palavras_linha = {padronizar_palavras(p) for p in linha.split()} # Padroniza as palavras do texto
         if palavra_padr.issubset(palavras_linha): #Verificando se os elementos de um conjunto estão presentes em outro conjunto
             linhas_encontradas.add(i)
 

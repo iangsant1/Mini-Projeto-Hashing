@@ -20,8 +20,8 @@ def construir_indice(texto: str) -> dict:
 
 def buscar(indice: dict, palavra: str ) -> list:
     palavra_padr = padronizar_palavras(palavra)
-    linhas = indice.get(palavra_padr, set())
-    return sorted((list(linhas)))
+    linhas = indice.get(palavra_padr, set()) # Procura pela palavra padronizada dentro do indice invertido, caso não encontre retorna um conjunto vazio
+    return sorted((list(linhas))) #Irá retornar uma lista ordenada
     
 
 def buscar_e(indice, palavras):
@@ -32,7 +32,7 @@ def buscar_e(indice, palavras):
     for palavra in palavras:
         linhas = buscar(indice, palavra)
         if resultados is None:
-            resultados = set(linhas)
+            resultados = set(linhas) 
         else: 
             resultados.intersection_update(linhas) #Uso da intersecção 
         if not resultados: #Em caso que a intersecção fique vazia, irá parar
